@@ -1,0 +1,28 @@
+.intro-start{
+    height: 100%;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+    
+}
+
+.intro-content{
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+ }
+ .button{
+    margin: 10px 10px; 
+    width: 280px;
+    
+    height: 40px;
+    color: white;
+
+}
+.completed{
+    background-color: rgb(75, 226, 75);
+}
+.review{
+    background-color:rgb(142, 68, 142);
+}

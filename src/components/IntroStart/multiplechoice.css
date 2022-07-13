@@ -1,0 +1,8 @@
+.content ul{
+    list-style-type: none;
+    padding-left: 10px;
+}
+.content h5,h4{
+    margin-top: 20px;
+    margin-left: 10px;
+}
