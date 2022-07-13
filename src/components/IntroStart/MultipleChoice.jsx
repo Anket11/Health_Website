@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ContainerNav from '../ContainerNav'
 import Result from "./Result";
+import Pagination from "../Pagination";
 import {
-  faAngleLeft,
   faAngleRight,
-  faHeart,
-  faVolumeHigh,
 } from "@fortawesome/free-solid-svg-icons";
 import "./introstart.css";
 import "./multiplechoice.css";
-import { propTypes } from "react-bootstrap/esm/Image";
-// var img = require("../img.png");
+
 const MultipleChoice = (props) => {
   const [selected, setSelected] = useState(null);
   const [result, setResult] = useState(null);
@@ -32,7 +29,7 @@ const MultipleChoice = (props) => {
 
         <h5>Let's Review!</h5>
         <h4>{props.mcq.question}</h4>
-        <ul>
+        <ul class="options">
           
           {props.mcq.options.map((option, index) => (
             
@@ -51,7 +48,9 @@ const MultipleChoice = (props) => {
             </li>
           ))}
         </ul>
-        
+        <div className="page">
+            <Pagination length={props.length} index={props.index} />
+      </div>
       </div>
       {result === null ? <button onClick={handleClick} className="button review">
         Let's Review <FontAwesomeIcon icon={faAngleRight} />

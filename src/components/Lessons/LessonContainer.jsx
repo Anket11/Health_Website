@@ -1,15 +1,6 @@
-import React, { useState,useEffect, useRef} from "react";
-import ContainerNav from "../ContainerNav";
+import React, { useState} from "react";
 import IntroStart from "../IntroStart/IntroStart";
 import Lesson from './Lesson'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleLeft,
-  faAngleRight,
-  faHeart,
-  faVolumeHigh,
-  faCircleCheck,
-} from "@fortawesome/free-solid-svg-icons";
 const LessonContainer = (props) => {
   const [show, setShow] = useState(false);
   const [index, setIndex] = useState(0);
@@ -40,6 +31,8 @@ const LessonContainer = (props) => {
         img={props.lesson.img}
         question = {props.lesson.content[index].question}
         answer = {props.lesson.content[index].answer}
+        index={index}
+        length={props.lesson.content.length}
          />
       )}
       {index === props.lesson.content.length && (

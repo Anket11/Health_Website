@@ -1,28 +1,7 @@
 import React from "react";
-import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
 import "./Header.css";
 const Header = () => {
   return (
-    // <Navbar className="navbar" collapseOnSelect expand="lg">
-    //   <Container>
-    //     <Navbar.Brand href="#home">Job Tracker</Navbar.Brand>
-    //     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-    //     <Navbar.Collapse id="responsive-navbar-nav">
-    //       <Nav className="me-auto">
-    //       <Nav.Link href="#features">Features</Nav.Link>
-    //       <Nav.Link href="#features">Features</Nav.Link>
-    //       <Nav.Link href="#features">Features</Nav.Link>
-
-    //       </Nav>
-    //       <Nav>
-    //         <Nav.Link href="#deets">More deets</Nav.Link>
-    //         <Nav.Link eventKey={2} href="#memes">
-    //           Dank memes
-    //         </Nav.Link>
-    //       </Nav>
-    //     </Navbar.Collapse>
-    //   </Container>
-    // </Navbar>
     <div
       style={{
         display: "grid",
@@ -46,7 +25,7 @@ const Header = () => {
           <div className="left">
 
             <h1 title="Job Search 2022" className="nav-heading">
-              BeamIt 2022
+              Health Tracker 2022
             </h1>
           </div>
         </div>
@@ -313,6 +292,7 @@ const Header = () => {
             <a
               tabIndex={0}
               role="button"
+              href="/share-board/62b95c3ca7aed90028c15713"
               target="_blank"
               style={{
                 cursor: "pointer",

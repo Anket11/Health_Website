@@ -1,5 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 .everything {
   height: 100vh;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1rem;
 }
 .boardworkspace {

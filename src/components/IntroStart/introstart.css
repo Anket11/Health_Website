@@ -1,83 +1,82 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
-.intro-start{
-    height: 100%;
-    width: 300px;
-    margin-left: 20px;
-    margin-top: 20px;
-    border: 1px solid black;
-    
+.intro-start {
+  border: 1px solid black;
+  height: 100%;
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 300px;
 }
-.top-nav{
-    background-color: rgb(224, 214, 224);
+.top-nav {
+  background-color: rgb(224, 214, 224);
 }
-.buttons{
-    padding: 10px 10px 0 10px ;
-
-    flex-shrink: 0;
-  flex-shrink: 1 0 auto;
+.buttons {
   display: flex;
   flex-direction: row;
-  position: relative;
+  flex-shrink: 0;
+  flex-shrink: 1 0 auto;
   justify-content: space-between;
+  padding: 10px 10px 0 10px;
+  position: relative;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+.top-nav h5 {
+  margin: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  size: 1rem !important;
+  text-align: center;
+}
+.buttons .heart:hover {
+  color: rgb(255, 2, 221);
+}
 
+img {
+  height: 150px;
+  width: 100%;
 }
-button{
-    border: none;
-    background-color: transparent;
-}
-.top-nav h5{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    size: 1rem !important;
-    margin: 0;
-}
-img{
-    height: 150px;
-    width: 100%;
-}
-.intro-head{
-    
-    border: 0.5px solid rgb(141, 139, 139);
-    margin: 20px 10px;
-    display: flex;
-    flex-direction: row;
+.intro-head {
   align-items: center;
-}
-.volume{
-    background-color:cyan;
-    margin-left: 10px;
-    padding: 10px;
-    border-radius: 50%;;
-}
-.intro-head-content{
-    margin: 10px 10px;
-    
 
+  border: 0.5px solid rgb(141, 139, 139);
+  display: flex;
+  flex-direction: row;
+  margin: 20px 10px;
 }
-.intro-head-content h5{
-    margin: 0;
+.volume {
+  background-color: cyan;
+  border-radius: 50%;
+  margin-left: 10px;
+  padding: 10px;
 }
-.intro-head-content p{
-    margin: 0;
+.intro-head-content {
+  margin: 10px 10px;
+}
+.intro-head-content h5 {
+  margin: 0;
+}
+.intro-head-content p {
+  margin: 0;
 }
 
-.intro-content{
-   margin-left: 10px;
+.intro-content {
+  margin-left: 10px;
 }
-.button{
-    margin: 10px 10px; 
-    width: 280px;
-    
-    height: 40px;
-    color: white;
+.button {
+  color: white;
 
+  height: 40px;
+  margin: 10px 10px;
+  width: 280px;
 }
-.completed{
-    background-color: rgb(75, 226, 75);
+
+.completed {
+  background-color: rgb(75, 226, 75);
 }
-.review{
-    background-color:rgb(142, 68, 142);
+.review {
+  background-color: rgb(142, 68, 142);
 }

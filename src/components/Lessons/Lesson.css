@@ -1,25 +1,24 @@
 .intro-start{
+    border: 1px solid black;
     height: 100%;
-    width: 300px;
     margin-left: 20px;
     margin-top: 20px;
-    border: 1px solid black;
-    
+    width: 300px;
 }
 
 .intro-content{
-    margin-top: 20px;
     margin-left: 10px;
     margin-right: 20px;
+    margin-top: 20px;
  }
  .button{
+    color: white;
+    height: 40px;
     margin: 10px 10px; 
     width: 280px;
-    
-    height: 40px;
-    color: white;
 
 }
+
 .completed{
     background-color: rgb(75, 226, 75);
 }

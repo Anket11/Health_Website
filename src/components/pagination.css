@@ -1,0 +1,13 @@
+.page{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .dot {
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    height: 0.5rem;
+    margin: 3px;
+    width: 0.5rem;
+  }

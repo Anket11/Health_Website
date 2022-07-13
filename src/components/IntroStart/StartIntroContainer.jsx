@@ -26,6 +26,8 @@ const StartIntroContainer = ({ intro }) => {
           img={intro.img}
           key={index}
           mcq={intro.allMCQ[index]}
+          index={index}
+          length={intro.allMCQ.length}
         />
       )}
       {index === intro.allMCQ.length && (
