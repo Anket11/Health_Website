@@ -38,4 +38,11 @@
   cursor: pointer;
   text-decoration: none;
 }
-
+.sidenav {
+  display: none; /* This is how it looks on mobile */
+}
+@media (min-width: 600px) {
+  .sidenav {
+    display: block; /* This is how it looks on desktop */
+  }
+}

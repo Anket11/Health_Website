@@ -2,9 +2,8 @@ import React from "react";
 import "./Header.css";
 const Header = () => {
   return (
-    <div
+    <div className="header"
       style={{
-        display: "grid",
         gridTemplateColumns: "1fr 3fr 1fr",
         columnGap: "10px",
         textTransform: "capitalize",
