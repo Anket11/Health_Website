@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import IntroStart from "./IntroStart";
 import MultipleChoice from "./MultipleChoice";
-const StartIntroContainer = ({ intro }) => {
+import { useSelector, useDispatch } from "react-redux";
+import { changeLike } from "../../redux/questionnaireSlice";
+const StartIntroContainer = ({ intro, indexOfList }) => {
+  const dispatch = useDispatch();
+
   const [show, setShow] = useState(false);
   const [index, setIndex] = useState(0);
-
+  const liked = useSelector((state) => state.questionnaire[indexOfList].liked);
   return (
     <>
       {!show && (
@@ -16,6 +20,13 @@ const StartIntroContainer = ({ intro }) => {
           content={intro.introContent}
           img={intro.img}
           buttonText="Let's Review"
+          indexOfList={intro.indexOfList}
+          liked = {liked}
+          likeUpdate = {()=> 
+            dispatch(changeLike(indexOfList))
+          // console.log("Yes")
+          }
+
         />
       )}
       {show && (index < intro.allMCQ.length && index>=0) && (
@@ -28,6 +39,14 @@ const StartIntroContainer = ({ intro }) => {
           mcq={intro.allMCQ[index]}
           index={index}
           length={intro.allMCQ.length}
+          indexOfList={intro.indexOfList}
+          liked = {liked}
+          likeUpdate = {()=> 
+            dispatch(changeLike(indexOfList))
+          // console.log("Yes")
+          }
+
+          
         />
       )}
       {index === intro.allMCQ.length && (
@@ -38,6 +57,14 @@ const StartIntroContainer = ({ intro }) => {
           content={intro.introContent}
           img={intro.img}
           completed={true}
+          indexOfList={intro.indexOfList}
+          liked = {liked}
+          likeUpdate = {()=> 
+            dispatch(changeLike(indexOfList))
+          // console.log("Yes")
+          }
+
+
         />
       )}
     </>

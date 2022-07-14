@@ -12,7 +12,8 @@ import "./introstart.css";
 const IntroStart = (props) => {
   return (
     <div className="intro-start">
-      <ContainerNav heading={props.heading} img={props.img} />
+          
+      <ContainerNav heading={props.heading} likeUpdate={props.likeUpdate} img={props.img} indexOfList={props.indexOfList} liked={props.liked}   />
       <div className="intro-head">
         <div className="volume">
           <FontAwesomeIcon size="lg" icon={faVolumeHigh} />

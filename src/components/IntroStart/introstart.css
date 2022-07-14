@@ -31,9 +31,7 @@ button {
   size: 1rem !important;
   text-align: center;
 }
-.buttons .heart:hover {
-  color: rgb(255, 2, 221);
-}
+
 
 img {
   height: 150px;

@@ -23,13 +23,13 @@ const MultipleChoice = (props) => {
   // console.log(isDisabled)
   return (
     <div className="intro-start">
-      <ContainerNav indexChangeNeg={props.indexChangeNeg} heading={props.heading} img={props.img} />
+      <ContainerNav indexChangeNeg={props.indexChangeNeg} liked={props.liked} likeUpdate={props.likeUpdate} indexOfList={props.indexOfList} heading={props.heading} img={props.img} />
       <div className="content">
         {result !== null && <Result result={result} contentRight={props.mcq.resultRight} contentWrong={props.mcq.resultWrong} />}
 
         <h5>Let's Review!</h5>
         <h4>{props.mcq.question}</h4>
-        <ul class="options">
+        <ul className="options">
           
           {props.mcq.options.map((option, index) => (
             

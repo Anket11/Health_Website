@@ -10,7 +10,7 @@ import LessonContainer from "./components/Lessons/LessonContainer"
 function App() {
   const questionnaire = useSelector((state) => state.questionnaire);
   const lessons = useSelector((state) => state.lessons);
-  // console.log(questionnaire);
+  // console.log(lessons);
 
   // console.log(show);
   return (
@@ -19,9 +19,12 @@ function App() {
       <div className="boardworkspace">
         <Header />
         <div className="lessons">
-        <StartIntroContainer intro={questionnaire} />
+        {questionnaire.map((quest,index) => (
+          <StartIntroContainer key={index} indexOfList={index} intro={quest} />
+        ))}
+        
         {lessons.map((lesson,index) => (
-          <LessonContainer key={index} lesson={lesson} />
+          <LessonContainer key={index} indexOfList={index} lesson={lesson} />
         ))}
         
         </div>

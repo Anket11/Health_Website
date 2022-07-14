@@ -1,7 +1,7 @@
 import React from 'react'
 import './result.css'
 const Correct = ({result, contentRight, contentWrong}) => {
-    console.log(result);
+    // console.log(result);
     
   return (
      result ? <div className="result" style = {{backgroundColor: "rgb(156, 233, 233)" }}>

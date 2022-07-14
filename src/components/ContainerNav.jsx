@@ -1,24 +1,29 @@
-import React,{useState} from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faHeart } from "@fortawesome/free-solid-svg-icons";
 const ContainerNav = (props) => {
-  const [liked,setLiked] = useState(true);
+
   return (
     <div className="top-nav">
       <div className="buttons">
         <button
           onClick={props.indexChangeNeg}
-          onMouseOver={(event) => (event.currentTarget.style.color = "rgb(255, 2, 221)")}
+          onMouseOver={(event) =>
+            (event.currentTarget.style.color = "rgb(255, 2, 221)")
+          }
           onMouseOut={(event) => (event.currentTarget.style.color = "black")}
         >
           <FontAwesomeIcon size="lg" icon={faAngleLeft} />
         </button>
-        <button className="heart">
+        <button
+          style={{ color: props.liked ? "rgb(255, 2, 221)" : "black" }}
+          className="heart"
+        >
           <FontAwesomeIcon
             className="heart"
-            onClick={(event) =>
-            setLiked(!liked)
-              (liked ? event.currentTarget.style.color = "rgb(255, 2, 221)":event.currentTarget.style.color = "black" )
+            onClick={() => 
+              props.likeUpdate()
+              // console.log("i got called")
             }
             size="lg"
             icon={faHeart}

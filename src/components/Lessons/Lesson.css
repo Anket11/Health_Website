@@ -11,12 +11,17 @@
     margin-right: 20px;
     margin-top: 20px;
  }
+ .intro-start .video{
+    margin: 10px;
+ }
+ .video iframe,.video video {
+    width: 100%;
+ }
  .button{
     color: white;
     height: 40px;
     margin: 10px 10px; 
     width: 280px;
-
 }
 
 .completed{
