@@ -7,7 +7,8 @@ const initialState = [
     listenTime: "3 min",
     introContent:
       "Pushing against physical limitations with pain can make it worse, but learning to respect limits, pace and rest adequately can lead to reduced pain in some conditions, and ultimately increase mobility and function.",
-    liked: false,
+    index:0,
+      liked: false,
     allMCQ: [
       {
         question: "Regular activity can:",
@@ -42,6 +43,12 @@ export const questionnaireSlice = createSlice({
   name: "Questionnaire",
   initialState,
   reducers: {
+    increIndex: (state = initialState, action) => {
+      state[action.payload].index = state[action.payload].index + 1;
+    },
+    decreIndex: (state = initialState, action) => {
+      state[action.payload].index = state[action.payload].index - 1;
+    },
     changeLike: (state = initialState, action) => {
       // console.log("I got called with" + state[action.payload].liked)
       state[action.payload].liked = !state[action.payload].liked;
@@ -49,5 +56,5 @@ export const questionnaireSlice = createSlice({
   },
 });
 
-export const { changeLike } = questionnaireSlice.actions;
+export const { increIndex, decreIndex, changeLike } = questionnaireSlice.actions;
 export default questionnaireSlice.reducer;

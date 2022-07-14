@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import IntroStart from "./IntroStart";
 import MultipleChoice from "./MultipleChoice";
 import { useSelector, useDispatch } from "react-redux";
-import { changeLike } from "../../redux/questionnaireSlice";
+import { increIndex, decreIndex, changeLike } from "../../redux/questionnaireSlice";
 const StartIntroContainer = ({ intro, indexOfList }) => {
   const dispatch = useDispatch();
 
   const [show, setShow] = useState(false);
-  const [index, setIndex] = useState(0);
+  // const [index, setIndex] = useState(0);
+  const index = useSelector((state) => state.questionnaire[indexOfList].index);
   const liked = useSelector((state) => state.questionnaire[indexOfList].liked);
   return (
     <>
@@ -31,8 +32,8 @@ const StartIntroContainer = ({ intro, indexOfList }) => {
       )}
       {show && (index < intro.allMCQ.length && index>=0) && (
         <MultipleChoice
-          indexChange={() => setIndex(index + 1)}
-          indexChangeNeg={() => (index===0) ? setShow(false):setIndex(index - 1)}
+          indexChange={() =>dispatch(increIndex(indexOfList))}
+          indexChangeNeg={() => (index===0) ? setShow(false):dispatch(decreIndex(indexOfList))}
           heading = {intro.heading}
           img={intro.img}
           key={index}
